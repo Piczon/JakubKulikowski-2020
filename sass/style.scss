@@ -1,1 +1,19 @@
 @import "mixins.scss";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    @include size(100%, 70%);
+}
+
+#title-section {
+    @include size(100%, 100vh);
+    background-image: url("../assets/the-blurred-819385_1920.jpg");
+    
+}
+
