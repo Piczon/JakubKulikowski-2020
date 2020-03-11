@@ -1,0 +1,41 @@
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin flexMixin($just, $align, $dir) {
+    display: flex;
+    justify-content: $just;
+    align-items: $align;
+    flex-direction: $dir;
+}
+@mixin font($fSize, $align) {
+    font-size: $fSize;
+    text-align: $align;
+}
+@mixin linearGradient($color1, $color2) {
+    background: linear-gradient(135deg, $color1 0%,$color2 93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+%setup {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+%backgroundMax {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+%fontWhite {
+    color: rgb(228, 228, 228);
+}
+%fontBlack {
+    color: rgb(39, 39, 39); 
+}
+%borderRadius {
+    border-radius: 5px;
+}
+%normalizeButton {
+    outline: none;
+    text-decoration: none;
+}
