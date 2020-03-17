@@ -1,19 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400&display=swap");
+#triangle-section, html, body {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+nav .right-side a {
+  outline: none;
+  text-decoration: none;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: "Alegreya Sans", sans-serif;
+  background-image: url("../assets/the-fog-4909513_1920.jpg");
+  background-attachment: fixed;
 }
 
 nav {
   position: fixed;
   width: 100%;
-  height: 70%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+nav .left-side, nav .right-side {
+  width: 50%;
+  height: 100%;
+}
+nav .right-side {
+  border-bottom: 0.1px solid #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+nav .right-side a {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+nav .right-side a img {
+  width: 23px;
+  height: 23px;
 }
 
 #title-section {
   width: 100%;
   height: 100vh;
-  background-image: url("../assets/the-blurred-819385_1920.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#title-section .left-side, #title-section .right-side {
+  width: 50%;
+  height: 100%;
+}
+#title-section .left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#title-section .left-side .top-box, #title-section .left-side .bottom-box {
+  width: 100%;
+  height: 50%;
+}
+#title-section .left-side .top-box {
+  border-bottom: 0.1px solid #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+#title-section .left-side .top-box h1 {
+  color: #fff;
+  font-size: 50px;
+  text-align: right;
+  line-height: 0;
+  font-weight: 300;
+}
+#title-section .left-side .bottom-box p {
+  color: #fff;
+  font-size: 20px;
+  text-align: right;
+  font-weight: 100;
+}
+
+#triangle-section {
+  width: 100%;
+  height: 309px;
+  background-image: url("../assets/triangle.png");
+  margin: 0;
+}
+
+#bio-section {
+  width: 100%;
+  height: 100vh;
+  margin-top: -3px;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
