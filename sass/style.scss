@@ -15,19 +15,31 @@ nav {
     position: fixed;
     @include size(100%, 70px);
     @include flexMixin(center, center, row);
+    transition: background-color 0.7s, box-shadow 0.7s;
     .left-side, .right-side {
         @include size(50%, 100%);
     }
     .right-side {
-        border-bottom: 0.1px solid #fff;
-        @include flexMixin(space-around, center, row);
-        a {
-            @include font(20px, center);
-            @extend %normalizeButton;
-            color: #fff;
-            img {
-                @include size(23px, 23px);
+        display: flex;
+        flex-direction: column;
+        .top-side {
+            @include size(100%, 99%);
+            @include flexMixin(space-around, center, row);
+            a {
+                @include font(20px, center);
+                @extend %normalizeButton;
+                color: #fff;
+                img {
+                    @include size(23px, 23px);
+                }
             }
+        }
+        .bottom-side {
+            align-self: flex-end;
+            @include size(100%, 1px);
+            background-color: #fff;
+            transition: width 0.5s linear;
+            
         }
     }
 }
