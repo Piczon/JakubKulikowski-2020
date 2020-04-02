@@ -1,6 +1,9 @@
 @import "mixins.scss";
 @import "fonts.scss";
 
+$firstcolor: #6bafdc;
+$secondcolor: #cf9032;
+
 html, body {
     margin: 0;
     padding: 0;
@@ -92,14 +95,14 @@ nav {
     section {
         .title {
             @include font(70px, center);
-            margin: 50px;
+            
             letter-spacing: 20px;
             font-weight: 200;
             .experience-title {
-                color: #6bafdc;
+                color: $firstcolor;
             }
             .project-title {
-                color: #cf9032;
+                color: $secondcolor;
             }
         }
     }
@@ -147,22 +150,65 @@ nav {
                 @include size(50%, 100%);
             }
             .left-line {
-                background: linear-gradient(to left, #6bafdc, #ffffff);
+                background: linear-gradient(to left, $firstcolor, #ffffff);
             }
             .right-line {
-                background: linear-gradient(to right, #6bafdc, #ffffff);
+                background: linear-gradient(to right, $firstcolor, #ffffff);
             }
         }
     }
     #projects {
         @include size(100%, 100vh);
-        @include flexMixin(flex-start, center, column);
+        @include flexMixin(space-around, center, column);
+        p {
+            @include font(20px, center);
+            font-weight: 200;
+        }
         .projects-body {
             @include flexMixin(space-around, center, row);
             @include size(inherit, auto);
+            flex-wrap: wrap;
             .project {
-                @include size(30%, 500px);
-                background-color: rgb(148, 148, 148);
+                @include size(25%, 500px);
+                .top {
+                    @include size(100%, 50%);
+                    @include flexMixin(center, center, row);
+                    a {
+                        @include size(100%, 100%);
+                        @extend %backgroundMax;
+                        filter: none;
+                        transition: filter 0.5s;
+                        &:hover {
+                            filter: blur(1px);
+                        }
+                    }
+
+                    .sewer {
+                        background-image: url('../assets/sewer.PNG');
+                    }
+                    .wagner {
+                        background-image: url('../assets/wagner.PNG');
+                        
+                    }
+                    
+                    .rybka {
+                        background-image: url('../assets/rybka.PNG');
+                    }
+                }
+                .bottom {
+                    @include size(100%, 50%);
+                    @include flexMixin(flex-start, center, column);
+                    margin-top: 20px;
+                    h2 {
+                        @include font(30px, center);
+                        line-height: 0;
+                        font-weight: 200;
+                    }
+                    p {
+                        font-weight: 300;
+                        color: $secondcolor;
+                    }
+                }
             }
         }
     }

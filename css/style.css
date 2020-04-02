@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400&display=swap");
-#triangle-section, html, body {
-  background-size: 100%;
+#bio-section #projects .projects-body .project .top a, #triangle-section, html, body {
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 nav .right-side .top-side a {
@@ -127,7 +128,6 @@ nav .right-side .bottom-side {
 #bio-section section .title {
   font-size: 70px;
   text-align: center;
-  margin: 50px;
   letter-spacing: 20px;
   font-weight: 200;
 }
@@ -201,9 +201,14 @@ nav .right-side .bottom-side {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
+}
+#bio-section #projects p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 200;
 }
 #bio-section #projects .projects-body {
   display: flex;
@@ -212,11 +217,56 @@ nav .right-side .bottom-side {
   flex-direction: row;
   width: inherit;
   height: auto;
+  flex-wrap: wrap;
 }
 #bio-section #projects .projects-body .project {
-  width: 30%;
+  width: 25%;
   height: 500px;
-  background-color: #949494;
+}
+#bio-section #projects .projects-body .project .top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#bio-section #projects .projects-body .project .top a {
+  width: 100%;
+  height: 100%;
+  filter: none;
+  transition: filter 0.5s;
+}
+#bio-section #projects .projects-body .project .top a:hover {
+  filter: blur(1px);
+}
+#bio-section #projects .projects-body .project .top .sewer {
+  background-image: url("../assets/sewer.PNG");
+}
+#bio-section #projects .projects-body .project .top .wagner {
+  background-image: url("../assets/wagner.PNG");
+}
+#bio-section #projects .projects-body .project .top .rybka {
+  background-image: url("../assets/rybka.PNG");
+}
+#bio-section #projects .projects-body .project .bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+#bio-section #projects .projects-body .project .bottom h2 {
+  font-size: 30px;
+  text-align: center;
+  line-height: 0;
+  font-weight: 200;
+}
+#bio-section #projects .projects-body .project .bottom p {
+  font-weight: 300;
+  color: #cf9032;
 }
 
 /*# sourceMappingURL=style.css.map */

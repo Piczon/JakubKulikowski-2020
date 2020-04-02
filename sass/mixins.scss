@@ -23,8 +23,9 @@
     overflow-x: hidden;
 }
 %backgroundMax {
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 %fontWhite {
     color: rgb(228, 228, 228);
