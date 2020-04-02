@@ -9,6 +9,7 @@ html, body {
     background-image: url("../assets/the-fog-4909513_1920.jpg");
     @extend %backgroundMax;
     background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -78,12 +79,92 @@ nav {
     @include size(100%, 309px);
     background-image: url("../assets/triangle.png");
     @extend %backgroundMax;
+    background-position: bottom;
     margin: 0;
+    margin-bottom: -3px;
 }
 
 #bio-section {
-    @include size(100%, 100vh);
-    margin-top: -3px;
+    @include size(100%, auto);
     background-color: #fff;
+    @include flexMixin(flex-start, center, column);
+    padding: 50px 0;
+    section {
+        .title {
+            @include font(70px, center);
+            margin: 50px;
+            letter-spacing: 20px;
+            font-weight: 200;
+            .experience-title {
+                color: #6bafdc;
+            }
+            .project-title {
+                color: #cf9032;
+            }
+        }
+    }
+    #experience {
+        @include size(60%, 90vh);
+        @include flexMixin(flex-start, center, column);
+        .experience-box {
+            @include size(100%, auto);
+            @include flexMixin(space-around, center, row);
+            p {
+                @include font(80px, center);
+                i {
+                    color: inherit;
+                    transition: color 0.7s;
+                }
+                &:hover {
+                    .fa-html5 {
+                        color: #e44d26;
+                    }
+                    .fa-sass {
+                        color: #cf649a;
+                    }
+                    .fa-js-square {
+                        color: #f7df1e;
+                    }
+                    .fa-bootstrap {
+                        color: #563d7c;
+                    }
+                    .fa-react {
+                        color: #00d8ff;
+                    }
+                    .fa-angular {
+                        color: #dd0031;
+                    }
+                    .fa-git-alt {
+                        color: #f05033;
+                    }
+                }
+            }
+        }
+        .line-box {
+            @include size(100%, 2px);
+            display: flex;
+            div {
+                @include size(50%, 100%);
+            }
+            .left-line {
+                background: linear-gradient(to left, #6bafdc, #ffffff);
+            }
+            .right-line {
+                background: linear-gradient(to right, #6bafdc, #ffffff);
+            }
+        }
+    }
+    #projects {
+        @include size(100%, 100vh);
+        @include flexMixin(flex-start, center, column);
+        .projects-body {
+            @include flexMixin(space-around, center, row);
+            @include size(inherit, auto);
+            .project {
+                @include size(30%, 500px);
+                background-color: rgb(148, 148, 148);
+            }
+        }
+    }
 }
 

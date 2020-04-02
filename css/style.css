@@ -16,6 +16,7 @@ html, body {
   font-family: "Alegreya Sans", sans-serif;
   background-image: url("../assets/the-fog-4909513_1920.jpg");
   background-attachment: fixed;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -108,14 +109,114 @@ nav .right-side .bottom-side {
   width: 100%;
   height: 309px;
   background-image: url("../assets/triangle.png");
+  background-position: bottom;
   margin: 0;
+  margin-bottom: -3px;
 }
 
 #bio-section {
   width: 100%;
-  height: 100vh;
-  margin-top: -3px;
+  height: auto;
   background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+}
+#bio-section section .title {
+  font-size: 70px;
+  text-align: center;
+  margin: 50px;
+  letter-spacing: 20px;
+  font-weight: 200;
+}
+#bio-section section .title .experience-title {
+  color: #6bafdc;
+}
+#bio-section section .title .project-title {
+  color: #cf9032;
+}
+#bio-section #experience {
+  width: 60%;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+#bio-section #experience .experience-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+#bio-section #experience .experience-box p {
+  font-size: 80px;
+  text-align: center;
+}
+#bio-section #experience .experience-box p i {
+  color: inherit;
+  transition: color 0.7s;
+}
+#bio-section #experience .experience-box p:hover .fa-html5 {
+  color: #e44d26;
+}
+#bio-section #experience .experience-box p:hover .fa-sass {
+  color: #cf649a;
+}
+#bio-section #experience .experience-box p:hover .fa-js-square {
+  color: #f7df1e;
+}
+#bio-section #experience .experience-box p:hover .fa-bootstrap {
+  color: #563d7c;
+}
+#bio-section #experience .experience-box p:hover .fa-react {
+  color: #00d8ff;
+}
+#bio-section #experience .experience-box p:hover .fa-angular {
+  color: #dd0031;
+}
+#bio-section #experience .experience-box p:hover .fa-git-alt {
+  color: #f05033;
+}
+#bio-section #experience .line-box {
+  width: 100%;
+  height: 2px;
+  display: flex;
+}
+#bio-section #experience .line-box div {
+  width: 50%;
+  height: 100%;
+}
+#bio-section #experience .line-box .left-line {
+  background: linear-gradient(to left, #6bafdc, #ffffff);
+}
+#bio-section #experience .line-box .right-line {
+  background: linear-gradient(to right, #6bafdc, #ffffff);
+}
+#bio-section #projects {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+#bio-section #projects .projects-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: inherit;
+  height: auto;
+}
+#bio-section #projects .projects-body .project {
+  width: 30%;
+  height: 500px;
+  background-color: #949494;
 }
 
 /*# sourceMappingURL=style.css.map */
