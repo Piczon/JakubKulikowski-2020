@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400&display=swap");
+html, body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: "Alegreya Sans", sans-serif;
+  background-image: url("../assets/the-fog-4909513_1920.jpg");
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+  overflow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#form-box {
+  width: 500px;
+  height: 700px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 4px 4px 10px 3px black;
+}
+#form-box .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+  height: 20%;
+}
+#form-box .title h1 {
+  font-size: 45px;
+  text-align: left;
+  font-weight: 300;
+}
+#form-box form {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+#form-box form input, #form-box form textarea {
+  padding: 10px;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#form-box form .text, #form-box form .message {
+  margin: 20px 0;
+  box-sizing: border-box;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  max-width: 90%;
+  min-width: 90%;
+}
+#form-box form .text {
+  height: 40px;
+}
+#form-box form .message {
+  min-height: 200px;
+  max-height: 300px;
+}
+#form-box form .button {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  background-color: #65ad5b;
+  cursor: pointer;
+  margin: 30px 0 0 0;
+  transition: background-color 0.7s;
+}
+#form-box form .button:hover {
+  background-color: #78c96d;
+}
+
+/*# sourceMappingURL=form.css.map */

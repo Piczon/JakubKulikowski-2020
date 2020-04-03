@@ -3,6 +3,7 @@
 
 $firstcolor: #6bafdc;
 $secondcolor: #cf9032;
+$blackcolor: #232323;
 
 html, body {
     margin: 0;
@@ -95,7 +96,7 @@ nav {
     section {
         .title {
             @include font(70px, center);
-            
+             
             letter-spacing: 20px;
             font-weight: 200;
             .experience-title {
@@ -143,19 +144,6 @@ nav {
                 }
             }
         }
-        .line-box {
-            @include size(100%, 2px);
-            display: flex;
-            div {
-                @include size(50%, 100%);
-            }
-            .left-line {
-                background: linear-gradient(to left, $firstcolor, #ffffff);
-            }
-            .right-line {
-                background: linear-gradient(to right, $firstcolor, #ffffff);
-            }
-        }
     }
     #projects {
         @include size(100%, 100vh);
@@ -163,6 +151,10 @@ nav {
         p {
             @include font(20px, center);
             font-weight: 200;
+            span {
+                font-weight: 300;
+                color: $secondcolor;
+            }
         }
         .projects-body {
             @include flexMixin(space-around, center, row);
@@ -211,6 +203,55 @@ nav {
                 }
             }
         }
+    }
+}
+
+footer {
+    @include size(100%, 400px);
+    background-color: $blackcolor;
+    @include flexMixin(space-between, center, column);
+    h2 {
+        @include font(50px, center);
+        color: #fff;
+        font-weight: 300;
+    }
+    a {
+        @include font(30px, center);
+        background-color: #3894dd;
+        @extend %normalizeButton;
+        color: #fff;
+        font-weight: 500;
+        padding: 20px 40px;
+        border-radius: 30px;
+        transition: background-color 0.7s;
+        &:hover {
+            background-color: #63b6fa; 
+        }
+        
+    }
+    p {
+        color: #fff;
+        font-size: 10px;
+    }
+}
+
+.line-box {
+    @include size(100%, 2px);
+    display: flex;
+    div {
+        @include size(50%, 100%);
+    }
+    .first-left {
+        background: linear-gradient(to left, $firstcolor, #ffffff);
+    }
+    .first-right {
+        background: linear-gradient(to right, $firstcolor, #ffffff);
+    }
+    .second-left {
+        background: linear-gradient(to left, $secondcolor, #ffffff);
+    }
+    .second-right {
+        background: linear-gradient(to right, $secondcolor, #ffffff);
     }
 }
 
