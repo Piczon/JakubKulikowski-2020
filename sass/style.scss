@@ -254,8 +254,16 @@ footer {
 .line-box {
     @include size(100%, 2px);
     display: flex;
+    justify-content: space-around;
     div {
-        @include size(50%, 100%);
+        @include size(0, 100%);
+        transition: width 0.7s;
+    }
+    .left-line {
+        justify-self: flex-start;
+    }
+    .right-line {
+        justify-self: flex-end;
     }
     .first-left {
         background: linear-gradient(to left, $firstcolor, #ffffff);
