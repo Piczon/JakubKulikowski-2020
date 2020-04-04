@@ -112,7 +112,7 @@ nav {
         }
     }
     #experience {
-        @include size(60%, 70vh);
+        @include size(65%, 70vh);
         @include flexMixin(space-around, center, column);
         .experience-box {
             @include size(100%, auto);
@@ -150,7 +150,7 @@ nav {
         }
     }
     #bio {
-        @include size(70%, 70vh);
+        @include size(70%, 80vh);
         @include flexMixin(center, center, column);
         .bio-box {
             margin: 30px;
@@ -254,17 +254,12 @@ footer {
 .line-box {
     @include size(100%, 2px);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     div {
         @include size(0, 100%);
         transition: width 0.7s;
     }
-    .left-line {
-        justify-self: flex-start;
-    }
-    .right-line {
-        justify-self: flex-end;
-    }
+    
     .first-left {
         background: linear-gradient(to left, $firstcolor, #ffffff);
     }

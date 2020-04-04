@@ -141,7 +141,7 @@ nav .right-side .bottom-side {
   color: #cf9032;
 }
 #bio-section #experience {
-  width: 60%;
+  width: 65%;
   height: 70vh;
   display: flex;
   justify-content: space-around;
@@ -187,7 +187,7 @@ nav .right-side .bottom-side {
 }
 #bio-section #bio {
   width: 70%;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -315,18 +315,12 @@ footer p {
   width: 100%;
   height: 2px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .line-box div {
   width: 0;
   height: 100%;
   transition: width 0.7s;
-}
-.line-box .left-line {
-  justify-self: flex-start;
-}
-.line-box .right-line {
-  justify-self: flex-end;
 }
 .line-box .first-left {
   background: linear-gradient(to left, #6bafdc, #ffffff);

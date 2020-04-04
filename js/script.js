@@ -21,15 +21,15 @@ window.onscroll = function() {
         navbar.style.boxShadow = "0px 0px 11px 0px rgba(0,0,0,0.75)";
         navbarRight.style.width = "0%";
 
-        if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        if(document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
             expLeft.style.width = "51%";
             expRight.style.width = "51%";
 
-            if(document.body.scrollTop > 1700 || document.documentElement.scrollTop > 1700) {
+            if(document.body.scrollTop > 1600 || document.documentElement.scrollTop > 1600) {
                 bioLeft.style.width = "51%";
                 bioRight.style.width = "51%";
 
-                if(document.body.scrollTop > 2300 || document.documentElement.scrollTop > 2300) {
+                if(document.body.scrollTop > 2100 || document.documentElement.scrollTop > 2100) {
                     projectLeft.style.width = "51%";
                     projectRight.style.width = "51%";
                 }
