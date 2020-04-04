@@ -4,6 +4,7 @@
 $firstcolor: #6bafdc;
 $secondcolor: #cf9032;
 $blackcolor: #232323;
+$redcolor: #ca1b1b;
 
 html, body {
     margin: 0;
@@ -102,14 +103,17 @@ nav {
             .experience-title {
                 color: $firstcolor;
             }
+            .bio-title {
+                color: $redcolor;
+            }
             .project-title {
                 color: $secondcolor;
             }
         }
     }
     #experience {
-        @include size(60%, 90vh);
-        @include flexMixin(flex-start, center, column);
+        @include size(60%, 70vh);
+        @include flexMixin(space-around, center, column);
         .experience-box {
             @include size(100%, auto);
             @include flexMixin(space-around, center, row);
@@ -142,6 +146,18 @@ nav {
                         color: #f05033;
                     }
                 }
+            }
+        }
+    }
+    #bio {
+        @include size(70%, 70vh);
+        @include flexMixin(center, center, column);
+        .bio-box {
+            margin: 30px;
+            p {
+                margin: 40px;
+                @include font(25px, center);
+                font-weight: 300;
             }
         }
     }
@@ -213,7 +229,7 @@ footer {
     h2 {
         @include font(50px, center);
         color: #fff;
-        font-weight: 300;
+        font-weight: 200;
     }
     a {
         @include font(30px, center);
@@ -253,5 +269,12 @@ footer {
     .second-right {
         background: linear-gradient(to right, $secondcolor, #ffffff);
     }
+    .third-left {
+        background: linear-gradient(to left, $redcolor, #ffffff);
+    }
+    .third-right {
+        background: linear-gradient(to right, $redcolor, #ffffff);
+    }
+    
 }
 

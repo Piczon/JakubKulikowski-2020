@@ -134,14 +134,17 @@ nav .right-side .bottom-side {
 #bio-section section .title .experience-title {
   color: #6bafdc;
 }
+#bio-section section .title .bio-title {
+  color: #ca1b1b;
+}
 #bio-section section .title .project-title {
   color: #cf9032;
 }
 #bio-section #experience {
   width: 60%;
-  height: 90vh;
+  height: 70vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
@@ -181,6 +184,23 @@ nav .right-side .bottom-side {
 }
 #bio-section #experience .experience-box p:hover .fa-git-alt {
   color: #f05033;
+}
+#bio-section #bio {
+  width: 70%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#bio-section #bio .bio-box {
+  margin: 30px;
+}
+#bio-section #bio .bio-box p {
+  margin: 40px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 300;
 }
 #bio-section #projects {
   width: 100%;
@@ -271,7 +291,7 @@ footer h2 {
   font-size: 50px;
   text-align: center;
   color: #fff;
-  font-weight: 300;
+  font-weight: 200;
 }
 footer a {
   font-size: 30px;
@@ -311,6 +331,12 @@ footer p {
 }
 .line-box .second-right {
   background: linear-gradient(to right, #cf9032, #ffffff);
+}
+.line-box .third-left {
+  background: linear-gradient(to left, #ca1b1b, #ffffff);
+}
+.line-box .third-right {
+  background: linear-gradient(to right, #ca1b1b, #ffffff);
 }
 
 /*# sourceMappingURL=style.css.map */
