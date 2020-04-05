@@ -12,6 +12,9 @@ html, body {
     scroll-behavior: smooth;
     overflow: none;
     @include flexMixin(center, center, column);
+    @media screen and (max-width: 800px) {
+        background-image: url("../assets/nature-4567502.jpg") !important;   
+    }
 }
 
 #form-box {
@@ -20,6 +23,14 @@ html, body {
     background-color: #f5f5f5;
     @include flexMixin(space-around, center, column);
     box-shadow: 4px 4px 10px 3px rgb(0, 0, 0);
+    @media screen and (max-height: 700px) {
+        @include size(100%, 100vh);  
+        border-radius: 0;
+    }
+    @media screen and (max-width: 600px) {
+        @include size(100%, 100vh);  
+        border-radius: 0;
+    }
     .title {
         @include flexMixin(center, center, row);
         @include size(90%, 20%);

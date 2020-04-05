@@ -20,6 +20,11 @@ html, body {
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 800px) {
+  html, body {
+    background-image: url("../assets/nature-4567502.jpg") !important;
+  }
+}
 
 #form-box {
   width: 500px;
@@ -31,6 +36,20 @@ html, body {
   align-items: center;
   flex-direction: column;
   box-shadow: 4px 4px 10px 3px black;
+}
+@media screen and (max-height: 700px) {
+  #form-box {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #form-box {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
 }
 #form-box .title {
   display: flex;
