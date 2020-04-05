@@ -2,7 +2,6 @@
 #bio-section #projects .projects-body .project .top a, #triangle-section, html, body {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
 }
 
 footer a, .navbar-mobile a, nav .right-side .top-side a {
@@ -22,7 +21,6 @@ html, body {
 @media screen and (max-width: 800px) {
   html, body {
     background-image: url("../assets/nature-4567502.jpg") !important;
-    background-size: 100% !important;
   }
 }
 
