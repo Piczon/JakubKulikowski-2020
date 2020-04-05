@@ -13,10 +13,12 @@ html, body {
     font-family: 'Alegreya Sans', sans-serif;
     background-image: url("../assets/the-fog-4909513_1920.jpg");
     @extend %backgroundMax;
-    background-position: center;
     background-attachment: fixed;
     scroll-behavior: smooth;
     @media screen and (max-width: 800px) {
+        background-image: url("../assets/nature-4567502.jpg") !important;
+    }
+    @media screen and (max-width: 500px) {
         background-image: url("../assets/nature-4567502.jpg") !important;
     }
 }
