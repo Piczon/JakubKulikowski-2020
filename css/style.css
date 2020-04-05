@@ -5,7 +5,7 @@
   background-position: center;
 }
 
-footer a, nav .right-side .top-side a {
+footer a, .navbar-mobile a, nav .right-side .top-side a {
   outline: none;
   text-decoration: none;
 }
@@ -29,6 +29,11 @@ nav {
   align-items: center;
   flex-direction: row;
   transition: background-color 0.7s, box-shadow 0.7s;
+}
+@media screen and (max-width: 1000px) {
+  nav {
+    display: none;
+  }
 }
 nav .left-side, nav .right-side {
   width: 50%;
@@ -61,6 +66,41 @@ nav .right-side .bottom-side {
   height: 1px;
   background-color: #fff;
   transition: width 0.5s linear;
+}
+
+.navbar-mobile {
+  width: 100%;
+  height: 70px;
+  display: none !important;
+  background-color: #232323;
+}
+@media screen and (max-width: 1000px) {
+  .navbar-mobile {
+    display: flex !important;
+    justify-content: space-around;
+    position: fixed;
+  }
+}
+.navbar-mobile a {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #fff;
+}
+@media screen and (max-width: 800px) {
+  .navbar-mobile a {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar-mobile a {
+    font-size: 10px;
+    text-align: center;
+  }
 }
 
 #title-section {
@@ -99,11 +139,47 @@ nav .right-side .bottom-side {
   line-height: 0;
   font-weight: 300;
 }
+@media screen and (max-width: 800px) {
+  #title-section .left-side .top-box h1 {
+    font-size: 40px;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 600px) {
+  #title-section .left-side .top-box h1 {
+    font-size: 30px;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 500px) {
+  #title-section .left-side .top-box h1 {
+    font-size: 18px;
+    text-align: right;
+  }
+}
 #title-section .left-side .bottom-box p {
   color: #fff;
   font-size: 20px;
   text-align: right;
   font-weight: 100;
+}
+@media screen and (max-width: 800px) {
+  #title-section .left-side .bottom-box p {
+    font-size: 20px;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 600px) {
+  #title-section .left-side .bottom-box p {
+    font-size: 15px;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 500px) {
+  #title-section .left-side .bottom-box p {
+    font-size: 10px;
+    text-align: right;
+  }
 }
 
 #triangle-section {
@@ -120,7 +196,7 @@ nav .right-side .bottom-side {
   height: auto;
   background-color: #fff;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   padding: 50px 0;
@@ -130,6 +206,19 @@ nav .right-side .bottom-side {
   text-align: center;
   letter-spacing: 20px;
   font-weight: 200;
+}
+@media screen and (max-width: 800px) {
+  #bio-section section .title {
+    font-size: 50px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  #bio-section section .title {
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 10px;
+  }
 }
 #bio-section section .title .experience-title {
   color: #6bafdc;
@@ -148,9 +237,21 @@ nav .right-side .bottom-side {
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 800px) {
+  #bio-section #experience {
+    width: 70%;
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  #bio-section #experience {
+    width: 90%;
+    height: 50vh;
+  }
+}
 #bio-section #experience .experience-box {
   width: 100%;
-  height: auto;
+  height: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -159,6 +260,18 @@ nav .right-side .bottom-side {
 #bio-section #experience .experience-box p {
   font-size: 80px;
   text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  #bio-section #experience .experience-box p {
+    font-size: 45px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  #bio-section #experience .experience-box p {
+    font-size: 25px;
+    text-align: center;
+  }
 }
 #bio-section #experience .experience-box p i {
   color: inherit;
@@ -193,8 +306,19 @@ nav .right-side .bottom-side {
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 800px) {
+  #bio-section #bio {
+    width: 90%;
+    height: 80vh;
+  }
+}
 #bio-section #bio .bio-box {
   margin: 30px;
+}
+@media screen and (max-width: 800px) {
+  #bio-section #bio .bio-box {
+    margin: 5px;
+  }
 }
 #bio-section #bio .bio-box p {
   margin: 40px;
@@ -202,9 +326,25 @@ nav .right-side .bottom-side {
   text-align: center;
   font-weight: 300;
 }
+@media screen and (max-width: 1000px) {
+  #bio-section #bio .bio-box p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  #bio-section #bio .bio-box p {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+#bio-section #bio .bio-box p span {
+  color: #ca1b1b;
+  font-weight: 500;
+}
 #bio-section #projects {
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -214,6 +354,21 @@ nav .right-side .bottom-side {
   font-size: 20px;
   text-align: center;
   font-weight: 200;
+  margin: 20px;
+  width: 90%;
+  height: auto;
+}
+@media screen and (max-width: 1000px) {
+  #bio-section #projects p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  #bio-section #projects p {
+    font-size: 13px;
+    text-align: center;
+  }
 }
 #bio-section #projects p span {
   font-weight: 300;
@@ -227,10 +382,18 @@ nav .right-side .bottom-side {
   width: inherit;
   height: auto;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 #bio-section #projects .projects-body .project {
-  width: 25%;
-  height: 500px;
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+}
+@media screen and (max-width: 500px) {
+  #bio-section #projects .projects-body .project {
+    width: 300px;
+    height: 300px;
+  }
 }
 #bio-section #projects .projects-body .project .top {
   width: 100%;
@@ -273,6 +436,12 @@ nav .right-side .bottom-side {
   line-height: 0;
   font-weight: 200;
 }
+@media screen and (max-width: 500px) {
+  #bio-section #projects .projects-body .project .bottom h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
 #bio-section #projects .projects-body .project .bottom p {
   font-weight: 300;
   color: #cf9032;
@@ -287,11 +456,35 @@ footer {
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 800px) {
+  footer {
+    width: 100%;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 500px) {
+  footer {
+    width: 100%;
+    height: 300px;
+  }
+}
 footer h2 {
   font-size: 50px;
   text-align: center;
   color: #fff;
   font-weight: 200;
+}
+@media screen and (max-width: 800px) {
+  footer h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  footer h2 {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 footer a {
   font-size: 30px;
@@ -306,6 +499,18 @@ footer a {
 footer a:hover {
   background-color: #63b6fa;
 }
+@media screen and (max-width: 800px) {
+  footer a {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  footer a {
+    font-size: 18px;
+    text-align: center;
+  }
+}
 footer p {
   color: #fff;
   font-size: 10px;
@@ -316,6 +521,12 @@ footer p {
   height: 2px;
   display: flex;
   justify-content: space-between;
+  margin: 20px;
+}
+@media screen and (max-width: 500px) {
+  .line-box {
+    margin: 5px;
+  }
 }
 .line-box div {
   width: 0;

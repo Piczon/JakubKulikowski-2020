@@ -22,6 +22,9 @@ nav {
     @include size(100%, 70px);
     @include flexMixin(center, center, row);
     transition: background-color 0.7s, box-shadow 0.7s;
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
     .left-side, .right-side {
         @include size(50%, 100%);
     }
@@ -49,6 +52,28 @@ nav {
         }
     }
 }
+.navbar-mobile {
+    @include size(100%, 70px);
+    display: none !important;
+    background-color: $blackcolor;
+    @media screen and (max-width: 1000px) {
+        display: flex !important;
+        justify-content: space-around;
+        position: fixed;
+    }
+    a {
+        @include size(30%, 100%);
+        @include flexMixin(center, center, row);
+        color: #fff;
+        @extend %normalizeButton;
+        @media screen and (max-width:800px) {
+            @include font(20px, center);
+        }
+        @media screen and (max-width:500px) {
+            @include font(10px, center);
+        }
+    }
+}
 
 #title-section {
     @include size(100%, 100vh);
@@ -69,6 +94,16 @@ nav {
                 @include font(50px, right);
                 line-height: 0;
                 font-weight: 300;
+                @media screen and (max-width: 800px) {
+                    @include font(40px, right);
+                }
+                @media screen and (max-width: 600px) {
+                    @include font(30px, right);
+                }
+                @media screen and (max-width: 500px) {
+                    @include font(18px, right);
+                    
+                }
             }
         }
         .bottom-box {
@@ -76,6 +111,16 @@ nav {
                 color: #fff;
                 @include font(20px, right);
                 font-weight: 100;
+                @media screen and (max-width: 800px) {
+                    @include font(20px, right);
+                }
+                @media screen and (max-width: 600px) {
+                    @include font(15px, right);
+                }
+                @media screen and (max-width: 500px) {
+                    @include font(10px, right);
+                    
+                }
             }
         }
     }
@@ -92,14 +137,20 @@ nav {
 #bio-section {
     @include size(100%, auto);
     background-color: #fff;
-    @include flexMixin(flex-start, center, column);
+    @include flexMixin(space-between, center, column);
     padding: 50px 0;
     section {
         .title {
             @include font(70px, center);
-             
             letter-spacing: 20px;
             font-weight: 200;
+            @media screen and (max-width: 800px) {
+                @include font(50px, center);
+            }
+            @media screen and (max-width: 500px) {
+                @include font(30px, center);
+                letter-spacing: 10px;
+            }
             .experience-title {
                 color: $firstcolor;
             }
@@ -114,11 +165,23 @@ nav {
     #experience {
         @include size(65%, 70vh);
         @include flexMixin(space-around, center, column);
+        @media screen and (max-width: 800px) {
+            @include size(70%, 70vh);
+        }
+        @media screen and (max-width: 500px) {
+            @include size(90%, 50vh);
+        }
         .experience-box {
-            @include size(100%, auto);
+            @include size(100%, 80%);
             @include flexMixin(space-around, center, row);
             p {
                 @include font(80px, center);
+                @media screen and (max-width: 1000px) {
+                    @include font(45px, center);
+                }
+                @media screen and (max-width: 500px) {
+                    @include font(25px, center);
+                }
                 i {
                     color: inherit;
                     transition: color 0.7s;
@@ -152,21 +215,46 @@ nav {
     #bio {
         @include size(70%, 80vh);
         @include flexMixin(center, center, column);
+        @media screen and (max-width: 800px) {
+            @include size(90%, 80vh);
+        }
+        
         .bio-box {
             margin: 30px;
+            @media screen and (max-width: 800px) {
+                margin: 5px;
+            }
             p {
                 margin: 40px;
                 @include font(25px, center);
                 font-weight: 300;
+                @media screen and (max-width: 1000px) {
+                    @include font(18px, center);
+                }
+                @media screen and (max-width: 800px) {
+                    @include font(13px, center);
+                }
+                span {
+                    color: $redcolor;
+                    font-weight: 500;
+                }
             }
         }
     }
     #projects {
-        @include size(100%, 100vh);
+        @include size(100%, auto);
         @include flexMixin(space-around, center, column);
         p {
             @include font(20px, center);
             font-weight: 200;
+            margin: 20px;
+            @include size(90%, auto);
+            @media screen and (max-width: 1000px) {
+                @include font(18px, center);
+            }
+            @media screen and (max-width: 800px) {
+                @include font(13px, center);
+            }
             span {
                 font-weight: 300;
                 color: $secondcolor;
@@ -176,8 +264,14 @@ nav {
             @include flexMixin(space-around, center, row);
             @include size(inherit, auto);
             flex-wrap: wrap;
+            margin-top: 20px;
             .project {
-                @include size(25%, 500px);
+                @include size(400px, 400px);
+                margin: 20px;
+                
+                @media screen and (max-width: 500px) {
+                    @include size(300px, 300px);
+                }
                 .top {
                     @include size(100%, 50%);
                     @include flexMixin(center, center, row);
@@ -211,6 +305,9 @@ nav {
                         @include font(30px, center);
                         line-height: 0;
                         font-weight: 200;
+                        @media screen and (max-width: 500px) {
+                            @include font(18px, center);
+                        }
                     }
                     p {
                         font-weight: 300;
@@ -226,10 +323,22 @@ footer {
     @include size(100%, 400px);
     background-color: $blackcolor;
     @include flexMixin(space-between, center, column);
+    @media screen and (max-width: 800px) {
+        @include size(100%, 350px);
+    }
+    @media screen and (max-width: 500px) {
+        @include size(100%, 300px);
+    }
     h2 {
         @include font(50px, center);
         color: #fff;
         font-weight: 200;
+        @media screen and (max-width: 800px) {
+            @include font(40px, center);
+        }
+        @media screen and (max-width: 500px) {
+            @include font(30px, center);
+        }
     }
     a {
         @include font(30px, center);
@@ -243,6 +352,12 @@ footer {
         &:hover {
             background-color: #63b6fa; 
         }
+        @media screen and (max-width: 800px) {
+            @include font(25px, center);
+        }
+        @media screen and (max-width: 500px) {
+            @include font(18px, center);
+        }
         
     }
     p {
@@ -255,6 +370,10 @@ footer {
     @include size(100%, 2px);
     display: flex;
     justify-content: space-between;
+    margin: 20px;
+    @media screen and (max-width: 500px) {
+        margin: 5px;
+    }
     div {
         @include size(0, 100%);
         transition: width 0.7s;
