@@ -22,7 +22,7 @@ html, body {
 @media screen and (max-width: 800px) {
   html, body {
     background-image: url("../assets/nature-4567502.jpg") !important;
-    background-size: fill !important;
+    background-size: 100% !important;
   }
 }
 
