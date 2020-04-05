@@ -2,6 +2,7 @@
 #bio-section #projects .projects-body .project .top a, #triangle-section, html, body {
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 footer a, .navbar-mobile a, nav .right-side .top-side a {
@@ -13,6 +14,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: auto;
   font-family: "Alegreya Sans", sans-serif;
   background-image: url("../assets/the-fog-4909513_1920.jpg");
   background-attachment: fixed;
