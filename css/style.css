@@ -61,10 +61,10 @@ nav .right-side .top-side a {
   font-size: 20px;
   text-align: center;
   color: #fff;
+  transition: color 0.7s;
 }
-nav .right-side .top-side a img {
-  width: 23px;
-  height: 23px;
+nav .right-side .top-side a:hover {
+  color: #b1b1b1;
 }
 nav .right-side .bottom-side {
   align-self: flex-end;

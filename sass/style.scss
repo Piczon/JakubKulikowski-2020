@@ -43,8 +43,9 @@ nav {
                 @include font(20px, center);
                 @extend %normalizeButton;
                 color: #fff;
-                img {
-                    @include size(23px, 23px);
+                transition: color 0.7s;
+                &:hover {
+                    color: rgb(177, 177, 177);
                 }
             }
         }
